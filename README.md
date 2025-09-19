@@ -51,7 +51,7 @@ git clone https://github.com/AmphionTeam/AnyAccomp.git
 cd AnyAccomp
 ```
 
-#### 2. Download the Pretrained Models
+### 2. Download the Pretrained Models
 
 We provide a simple Python script to download all the necessary pretrained models from Hugging Face into the correct directory.
 
@@ -69,7 +69,7 @@ If you have trouble connecting to Hugging Face, you can try switching to a mirro
 export HF_ENDPOINT=https://hf-mirror.com
 ```
 
-#### 3. Install the Environment
+### 3. Install the Environment
 
 Before start installing, make sure you are under the `AnyAccomp` directory. If not, use `cd` to enter.
 
