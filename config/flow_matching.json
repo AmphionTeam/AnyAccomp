@@ -1,0 +1,74 @@
+{
+    "model_type": "Sing2SongNoText",
+    "preprocess": {
+        "use_mel": true,
+        "sample_rate": 24000,
+        "n_fft": 1920,
+        "num_mels": 128,
+        "sampling_rate": 24000,
+        "hop_size": 480,
+        "hop_size_vocal": 480,
+        "hop_size_accompaniment": 480,
+        "win_size": 1920,
+        "fmin": 0,
+        "fmax": 12000,
+        "mel_var": 8.14,
+        "mel_mean": -4.92,
+
+        "chromagram": {
+            "naive": true,
+            "hop_size": 480,
+            "sample_rate": 24000,
+            "n_fft": 1920,
+            "num_mels": 128,
+            "win_size": 1920,
+            "fmin": 0,
+            "fmax": 12000,
+            "mel_var": 8.14,
+            "mel_mean": -4.92,
+            "f0_fmin": 50.0,
+            "f0_fmax": 1100.0
+        }
+    },
+    "model": {
+        "flow_matching_transformer": {
+            "vocab_size": 512,
+            "use_cond_code": true,
+            "mel_dim": 128,
+            "cond_dim": 768,
+            "hidden_size": 1024,
+            "num_layers": 10,
+            "num_heads": 16,
+            "cfg_scale": 0.2,
+            "prompt_prob": 0.,
+            "use_pretrained_model": false,
+            "sigma": 1e-5,
+            "time_scheduler": "cos",
+            "repa_loss": {
+                "enable": true,
+                "weight": 0.5,
+                "repa_layer": 4,
+            },
+            "flash_attention": false,
+        },
+        "coco": {
+            "coco_type": "style", // content, style, or content_style
+            "downsample_rate": 1, // The original frame rate is 50 Hz, downsample to 6.25 Hz
+            "codebook_size": 512,
+            "hidden_size": 1024, // Representations Dim
+            "codebook_dim": 8,
+            "encoder": {
+                "vocos_dim": 384,
+                "vocos_intermediate_dim": 2048,
+                "vocos_num_layers": 12,
+            },
+            "decoder": {
+                "vocos_dim": 384,
+                "vocos_intermediate_dim": 2048,
+                "vocos_num_layers": 12,
+            },
+            "chromagram_dim": 24,
+            "pretrained_path": "./pretrained/vq"
+        },
+    },
+}

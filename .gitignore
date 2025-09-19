@@ -1,0 +1,68 @@
+# Mac OS files
+.DS_Store
+
+# IDEs
+.idea
+.vs
+.vscode
+.cache
+pyrightconfig.json
+
+# GitHub files
+.github
+
+# Byte-compiled / optimized / DLL / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.temp
+*.c
+*.so
+*.o
+
+# Developing mode
+_*.sh
+_*.json
+*.lst
+yard*
+*.out
+evaluation/evalset_selection
+mfa
+egs/svc/*wavmark
+egs/svc/custom
+egs/svc/*/dev*
+egs/svc/dev_exp_config.json
+egs/svc/dev
+bins/svc/demo*
+bins/svc/preprocess_custom.py
+data
+ckpts
+
+# Data and ckpt
+*.pkl
+*.pt
+*.npy
+*.npz
+*.tar.gz
+*.ckpt
+*.flac
+pretrained/wenet/*conformer_exp
+pretrained/bigvgan/args.json
+
+# Runtime data dirs
+processed_data
+data
+model_ckpt
+logs
+*.lst
+source_audio
+result
+conversion_results
+get_available_gpu.py
+
+*.safetensors
+
+pretrained/
+example/output
+example/output_gradio
